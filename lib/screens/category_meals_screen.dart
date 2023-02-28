@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:deli_meals/dummy_data.dart';
+import 'package:deli_meals/widgets/meal_item.dart';
 import 'package:flutter/material.dart';
 
 class CategoryMealsScreen extends StatelessWidget {
@@ -23,8 +26,12 @@ class CategoryMealsScreen extends StatelessWidget {
         title: Text(categoryTitle!),
       ),
       body: ListView.builder(
-        itemBuilder: (context, index) => Text(
-          categoryMeals[index].title,
+        itemBuilder: (context, index) => MealItem(
+          title: categoryMeals[index].title,
+          imageUrl: categoryMeals[index].imageUrl,
+          duration: categoryMeals[index].duration,
+          complexity: categoryMeals[index].complexity,
+          affordability: categoryMeals[index].affordability,
         ),
         itemCount: categoryMeals.length,
       ),

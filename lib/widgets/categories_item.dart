@@ -1,4 +1,3 @@
-import 'package:deli_meals/category_meals_screen.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesItem extends StatelessWidget {
