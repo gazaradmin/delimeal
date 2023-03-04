@@ -7,11 +7,6 @@ import 'package:flutter/material.dart';
 class CategoryMealsScreen extends StatelessWidget {
   const CategoryMealsScreen({super.key});
 
-  // final String id;
-  // final String categoryTitle;
-
-  // const CategoryMealsScreen(this.id, this.categoryTitle, {super.key});
-
   @override
   Widget build(BuildContext context) {
     final routeArgs =
@@ -27,6 +22,7 @@ class CategoryMealsScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (context, index) => MealItem(
+          id: categoryMeals[index].id,
           title: categoryMeals[index].title,
           imageUrl: categoryMeals[index].imageUrl,
           duration: categoryMeals[index].duration,
